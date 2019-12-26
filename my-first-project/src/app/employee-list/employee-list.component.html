@@ -1,0 +1,30 @@
+ <div class="container">
+    <div class= "row">
+        <div>
+            <input id="lngid"  class="" [(ngModel)]="id" hidden/>
+        </div>
+        <div class="col-sm-2">
+            <input id="txtFirstName" placeholder="First Name" [(ngModel)]="firstname"/>
+        </div>
+        <div class="col-sm-2">
+            <input id="txtLastName" placeholder="Last Name" [(ngModel)]="lastname"/>
+        </div>
+        <div class="col-sm-2">
+            <button (click)="UpdateData()">Update</button>
+        </div>       
+    </div>
+    <br>
+    <div class= "row">
+    <table  style="width:100%">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    <tr *ngFor="let employees of Employee">
+        <td (click)="fillData(employees)">{{ employees.strFirstName }}</td>
+        <td (click)="fillData(employees)">{{ employees.strLastName }}</td>
+    </tr>
+    </table>
+    </div>  
+ </div>
+ 
